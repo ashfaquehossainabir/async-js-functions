@@ -13,7 +13,7 @@ const posts = [
     }, 1000);
   }
   
-  getPosts();
+  // getPosts();
   
   // setTimeOut() define error (not solved)
   
