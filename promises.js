@@ -35,13 +35,44 @@ const posts = [
     .catch(err => console.log(err));
     */
 
+    // ---------------------------------| Async/Await |----------------------------------------
+
+    /*
+    // Async/Await
+    async function init() {
+      await createPost({ title:'Post three', body:'This is post three' });
+
+      getPosts();
+    }
+
+    init();
+    */
+
+    // ------------------------------| Async/Await with fetch |-------------------------------
+
+    async function fetchUsers() {
+      const res = await fetch('https://jsonplaceholder.typicode.com/users');
+
+      const data = await res.json();
+
+      console.log(data);
+    }
+
+    fetchUsers();
+
+    // --------------------------------| Promise.all |----------------------------------------
+
+    /*
     // Promise.all
     const promise1 = Promise.resolve('Hello World!');
     const promise2 = 10;
     const promise3 = new Promise((resolve, reject) => 
     setTimeout(resolve, 2000, 'GoodBye!'));
 
-    const promise4 = fetch('https://jsonplaceholder.typicode.com/users');  // Continue video from 19:12 (https://www.youtube.com/watch?v=PoRJizFvM7s&t=645s)
+    const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => 
+    res.json()
+    );
 
-    Promise.all([promise1, promise2, promise3]).then(
+    Promise.all([promise1, promise2, promise3, promise4]).then(
         (values) => console.log(values));
+    */
