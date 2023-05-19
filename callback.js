@@ -15,10 +15,6 @@ const posts = [
   
   // getPosts();
   
-  // setTimeOut() define error (not solved)
-  
-  
-  
   function createPost(post, callback) {
     setTimeout(() => {
       posts.push(post);
